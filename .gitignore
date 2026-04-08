@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*$py.class
+extensions/
+dashboard/node_modules/
+dashboard/.next/
+dashboard/out/
+dashboard/build/
+.env
+.env.local
+.DS_Store
+argv.json

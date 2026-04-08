@@ -1,0 +1,45 @@
+[
+  {
+    "rule_id": "CIS-2.1.5",
+    "title": "Ensure that S3 Buckets are configured with 'Block public access (bucket settings)'",
+    "description": "S3 bucket my-public-company-data-bucket public access block is disabled.",
+    "severity": "HIGH",
+    "resource_id": "my-public-company-data-bucket",
+    "account_id": "123456789012",
+    "region": "us-east-1",
+    "is_compliant": false,
+    "remediation_action": "s3:PutPublicAccessBlock",
+    "ai_evaluation": {
+      "ai_risk_score": 80,
+      "ai_rationale": "[MOCK] AI assessed base severity HIGH. Scored 80 based on context tags: {'Environment': 'Production', 'DataClassification': 'Confidential'}"
+    },
+    "remediation_outcome": "TICKETED"
+  },
+  {
+    "rule_id": "CIS-2.1.5",
+    "title": "Ensure that S3 Buckets are configured with 'Block public access (bucket settings)'",
+    "description": "S3 bucket my-secure-log-bucket public access block is enabled.",
+    "severity": "HIGH",
+    "resource_id": "my-secure-log-bucket",
+    "account_id": "123456789012",
+    "region": "us-east-1",
+    "is_compliant": true,
+    "remediation_action": ""
+  },
+  {
+    "rule_id": "CIS-1.14",
+    "title": "Ensure hardware MFA is enabled for the 'root' account",
+    "description": "Root account MFA is disabled.",
+    "severity": "CRITICAL",
+    "resource_id": "aws-account-summary",
+    "account_id": "123456789012",
+    "region": "global",
+    "is_compliant": false,
+    "remediation_action": "iam:EnableMFADevice",
+    "ai_evaluation": {
+      "ai_risk_score": 95,
+      "ai_rationale": "[MOCK] AI assessed base severity CRITICAL. Scored 95 based on context tags: {}"
+    },
+    "remediation_outcome": "MANUAL_INTERVENTION_REQUIRED"
+  }
+]
